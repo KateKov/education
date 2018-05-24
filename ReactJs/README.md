@@ -1,10 +1,10 @@
 ## **REACTJS**
 
-#### -   *What is ReactJs?*
+### -   *What is ReactJs?*
 ReactJs is a JS library which follows the component based approach that helps in building reusable UI components. It is used for developing complex and interactive web and mobil UI.
-#### -   *Why I should use ReactJs?*
+### -   *Why I should use ReactJs?*
 Because it increases the application's performance. It also used JSX, that increases code's readability. ReactJs is easy to integrate with other frameworks. Writing UI test cases become easy. 
-#### -   *What are the features of ReactJs?*
+### -   *What are the features of ReactJs?*
 1. ```Virtual DOM``` instead of the real DOM. 
 2. ```Server-side rendering```
 3. ```Uni-directional data flow``` (data flows from parent to child)
@@ -27,7 +27,7 @@ Components let us split UI into independent, reusable pieces and think about eac
 
 > We can use <React.Fragment> to group a list of children without adding extra nodes to the DOM.
 
-#### -   *What is JSX?*
+### -   *What is JSX?*
 It is a syntax extension to JavaScript and stands as JavaScript XML. 
 ReactJs doesn't separate technologies by putting markup and logic in separate files, it ```separates concerns``` with loosely coupled units calles 'components'. JSX is helpful as a visual aid when working with UI inside the JS code and allows ReactJs to show more useful error and warning messages.
 Example (ES6):
@@ -56,7 +56,7 @@ React.createElement(
 Where is the first parameter is the type of component, the second type is props (stands for properties) and other input parameters are children. 
 We can also embed JavaScript expression in JSX using curly braces. 
 > We should always start component with a capital letter, so JSX will be know that it is reffering toa React component
-#### -   *How to enable browsers to read JSX?*
+### -   *How to enable browsers to read JSX?*
 By using JSX transformers like Babel.  
 ### - *What is Props?*
 An object, that React creates based on JSX attributes passed to the React component. It is the way we get data into the components.
