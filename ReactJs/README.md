@@ -90,7 +90,7 @@ State is object that holds data. State is similar to props, but it is private an
 State lives inside of a component and stores data that component and its children may need.
 > We mustn't update the state directly.
 
-We can update state by using this.setState().
+We can update state by using `this.setState().`
 > State updates may be asynchronous so we should use setState() that accepts a function rather that object
 
 > State updates are merged. We can update variables independetly
