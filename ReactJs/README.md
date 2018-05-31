@@ -137,8 +137,28 @@ Ref updates happen before componentDidMount or componentDidUpdate lifecycle hook
 Context provides a way to pass data through the component tree without having to pass props down manually at every level.
 ### - *When to use Context?*
 Context is designed to share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language
-
-### - *What are alternatives for binding methods in the constructor?
+### - *What are differents between presentational components and containers?*
+1. `Presenational components`
+- Are concerned with how things `look`.
+- May contain both presentational and container components inside, and usually have some DOM markup and styles of their own.
+- Often allow containment via this.props.children.
+- Have no dependencies on the rest of the app, such as actions or stores.
+- Don’t specify how the data is loaded or mutated.
+- Receive data and callbacks exclusively via props.
+- Rarely have their own state (when they do, it’s UI state rather than data).
+- Are written as functional components unless they need state, lifecycle hooks, or performance optimizations.
+2. `Containers`
+- Are concerned with how things `work`.
+- May contain both presentational and container components inside but usually don’t have any DOM markup of their own except for some wrapping divs, and never have any styles.
+- Provide the data and behavior to presentational or other container components.
+- Call actions and provide these as callbacks to the presentational components.
+- Are often stateful, as they tend to serve as data sources.
+- Are usually generated using higher order components such as connect() from React Redux, createContainer() from Relay, or 
+> We should be able to replace a presentational component with a container without modifying any of the call sites. Therefore, both presentational and container components can contain other presentational or container components just fine.
+### - *What restrictions have functions?*
+State, lifecycle hooks, or performance optimizations are not available to the function, but to the class.
+(components can be declared both as classes and as functions)
+### - *What are alternatives for binding methods in the constructor?*
 Class fields syntax
 ```javascript
     handleClick = () => {
